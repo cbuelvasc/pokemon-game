@@ -2,11 +2,11 @@
   <h1 v-if="!pokemon">Espere por favor...</h1>
   <div v-else>
     <h1>¿Quién es este pokémon?</h1>
-    <PopkemonImage
+    <PokemonImage
       v-bind:pokemonId="pokemon.id"
       v-bind:showPokemon="showPokemon"
     />
-    <PopkemonOptions
+    <PokemonOptions
       v-bind:pokemons="pokemons"
       @selection="checkAnswer"
     />
@@ -19,15 +19,15 @@
 </template>
 
 <script>
-import PopkemonImage from '@/components/PokemonImage.vue'
-import PopkemonOptions from '@/components/PokemonOptions.vue'
+import PokemonImage from '@/components/PokemonImage.vue'
+import PokemonOptions from '@/components/PokemonOptions.vue'
 import getPokemonOptions from '@/helpers/getPokemonOptions'
 
 export default {
   name: 'Pokemon',
   components: {
-    PopkemonImage,
-    PopkemonOptions
+    PokemonImage,
+    PokemonOptions
   },
   data () {
     return {
